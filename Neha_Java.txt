@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class Task1{
+	public static void main(String args[]){
+		int moneySpent, priceOfAnItem, tagsToReturn;
+		Scanner sc = new Scanner(System.in);
+		moneySpent = sc.nextInt();
+		priceOfAnItem = sc.nextInt();
+		tagsToReturn = sc.nextInt();
+		if(tagsToReturn >= 10)
+		{
+			tagsToReturn = tagsToReturn+1;
+			
+		}
+		System.out.println("The total number of items (purchased +free items) :" + tagsToReturn);
+	}
+
+}
+
+Using Recursion::
+import java.util.Scanner;
+public class Task1R{
+	static int purchase(int Tags){
+		if(Tags < 10)
+		{
+			return Tags;
+		}
+		else
+		{
+			return (Tags+1);
+		}
+	}
+	public static void main(String args[])
+	{
+		int moneySpent, priceOfAnItem, tagsToReturn;
+		Scanner sc = new Scanner(System.in);
+		moneySpent = sc.nextInt();
+		priceOfAnItem = sc.nextInt();
+		tagsToReturn = sc.nextInt();
+		int T;
+		T = purchase(tagsToReturn);
+		System.out.println("The total number of items (purchased +free items) :" + T);
+	}
+}
